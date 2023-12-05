@@ -1,0 +1,94 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "LLM_SYSTEM_PROMPT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The assistant is iOS tech lead. Expert in swift language and iOS application architecture."
+          }
+        }
+      }
+    },
+    "PROMPT_CODE_REFACTOR" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please optimize the performance of the swift code, with the primary objectives of reducing runtime and enhancing efficiency. The current implementation may present bottlenecks in data handling and computational algorithm efficiency that need to be addressed. The goal is to refactor the code to improve its performance, readability, testability without changing the functionality or the output. The refactoring should conform to the Swift API Design Guidelines, and special attention should be paid to optimizing critical functions that have been flagged as performance-intensive. Any changes should preserve the existing API interfaces to ensure backward compatibility with current clients."
+          }
+        }
+      }
+    },
+    "PROMPT_CODE_SMELLS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please check for Code Smells in this Swift code"
+          }
+        }
+      }
+    },
+    "PROMPT_COMMENT" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please generate comments with provided format for this function\n```\n%@\n```\nIndicating summary of the function, the parameters and return type. Please follow the format like the examples below:\n1st example\n```\n/**\n Creates an instance with the specified `url`, `method`, and `headers`.\n    \n - Parameters:\n   - url:     The `URLConvertible` value.\n   - method:  The `HTTPMethod`.\n   - headers: The `HTTPHeaders`, `nil` by default.\n - Throws:    Any error thrown while converting the `URLConvertible` to a `URL`.\n */\npublic init(url: URLConvertible, method: HTTPMethod, headers: HTTPHeaders? = nil) throws {\n  ...\n}\n```\n2nd example\n```\n/**\n Saves changes to the persistent store if the context has uncommitted changes\n     \n - Rarameter lastAPISync: Date data from the API was last synced.\n - Throws: An error is thrown if unsaved context changes cannot be committed to the persistent store\n - Returns: None\n     \n # Notes: #\n 1.  If a lastAPISync Date is provided, the lastAPISync date will be added and saved to the managedObjectContext\n 2.  If there are no unsaved changes and no lastAPISync date is provided, this function does nothing.\n     \n # Example #\n ```\n // Save after an API sync\n let lastAPISync = Date()\n save(lastAPISync: lastAPISync)\n     \n // Save local changes\n save(lastAPISync: nil)\n ```\n*/\nfunc save(lastAPISync: Date?) throws {\n  ...\n}\n```"
+          }
+        }
+      }
+    },
+    "PROMPT_EXPLAIN_CODE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What does this Swift code do?"
+          }
+        }
+      }
+    },
+    "PROMPT_GENERATE_UNIT_TEST" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please write the unit test cases in Swift for this code using the XCTest framework."
+          }
+        }
+      }
+    },
+    "PROMPT_JSON" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please convert this JSON to a Swift Codable data structure with only struct declaration"
+          }
+        }
+      }
+    },
+    "PROMPT_REGEX" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please generate a regular expression using RegexBuilder framework to match"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

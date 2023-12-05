@@ -1,0 +1,1011 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8420C1C2B1A853D0011C26A /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8420C192B1A853D0011C26A /* NetworkLogger.swift */; };
+		C8420C1D2B1A853D0011C26A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8420C1A2B1A853D0011C26A /* Logging.swift */; };
+		C8420C1E2B1A853D0011C26A /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8420C1B2B1A853D0011C26A /* URL+Extensions.swift */; };
+		C8420C202B1A854B0011C26A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8420C1F2B1A854B0011C26A /* String+Extensions.swift */; };
+		C8420C222B1A999E0011C26A /* LanguageModelConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8420C212B1A999E0011C26A /* LanguageModelConfig.swift */; };
+		C8420C242B1AA0D20011C26A /* LanguageModelConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8420C232B1AA0D20011C26A /* LanguageModelConfigBuilder.swift */; };
+		C86D83D62B151DBD003FFEF5 /* UnitTestEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83D52B151DBD003FFEF5 /* UnitTestEditorCommand.swift */; };
+		C86D83D82B151E05003FFEF5 /* ExplainCodeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83D72B151E05003FFEF5 /* ExplainCodeCommand.swift */; };
+		C86D83DA2B151E36003FFEF5 /* CommentCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83D92B151E36003FFEF5 /* CommentCommand.swift */; };
+		C86D83DC2B151E5D003FFEF5 /* RegexCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83DB2B151E5D003FFEF5 /* RegexCommand.swift */; };
+		C86D83DE2B151E84003FFEF5 /* CodeSmellsEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83DD2B151E84003FFEF5 /* CodeSmellsEditorCommand.swift */; };
+		C86D83E02B151EA9003FFEF5 /* JSON2SwiftEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83DF2B151EA9003FFEF5 /* JSON2SwiftEditorCommand.swift */; };
+		C86D83E42B15216B003FFEF5 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83E32B15216B003FFEF5 /* SourceEditorExtension.swift */; };
+		C86D83E62B1523FB003FFEF5 /* ConverterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83E52B1523FB003FFEF5 /* ConverterError.swift */; };
+		C86D83E82B152420003FFEF5 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83E72B152420003FFEF5 /* Suggestion.swift */; };
+		C86D83EA2B1524B3003FFEF5 /* BaseXcodeGPTRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83E92B1524B3003FFEF5 /* BaseXcodeGPTRepository.swift */; };
+		C86D83EC2B1524D7003FFEF5 /* XcodeGPTUnitTestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83EB2B1524D7003FFEF5 /* XcodeGPTUnitTestRepository.swift */; };
+		C86D83EE2B1524FE003FFEF5 /* XcodeGPTRegexRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83ED2B1524FE003FFEF5 /* XcodeGPTRegexRepository.swift */; };
+		C86D83F02B152528003FFEF5 /* XcodeGPTJSONConverterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83EF2B152528003FFEF5 /* XcodeGPTJSONConverterRepository.swift */; };
+		C86D83F22B15254D003FFEF5 /* XcodeGPTCodeSmellsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83F12B15254D003FFEF5 /* XcodeGPTCodeSmellsRepository.swift */; };
+		C86D83F42B15256C003FFEF5 /* XcodeGPTExplainCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83F32B15256C003FFEF5 /* XcodeGPTExplainCodeRepository.swift */; };
+		C86D83F62B152589003FFEF5 /* XcodeGPTCommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83F52B152589003FFEF5 /* XcodeGPTCommentRepository.swift */; };
+		C86D83FA2B152F78003FFEF5 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83F92B152F78003FFEF5 /* ChatService.swift */; };
+		C86D83FE2B152FC3003FFEF5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83FD2B152FC3003FFEF5 /* Constants.swift */; };
+		C86D84002B152FE5003FFEF5 /* ChatGPTRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D83FF2B152FE5003FFEF5 /* ChatGPTRequestBody.swift */; };
+		C86D84022B153007003FFEF5 /* ChatGPTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84012B153007003FFEF5 /* ChatGPTResponse.swift */; };
+		C86D84042B153029003FFEF5 /* ChatGPTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84032B153029003FFEF5 /* ChatGPTError.swift */; };
+		C86D84062B153056003FFEF5 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84052B153056003FFEF5 /* NetworkRequest.swift */; };
+		C86D84082B1530B9003FFEF5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C86D84072B1530B9003FFEF5 /* Localizable.xcstrings */; };
+		C86D840A2B153224003FFEF5 /* ExplainCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84092B153224003FFEF5 /* ExplainCodeRepository.swift */; };
+		C86D840C2B153240003FFEF5 /* RegexRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D840B2B153240003FFEF5 /* RegexRepository.swift */; };
+		C86D840E2B15325F003FFEF5 /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D840D2B15325F003FFEF5 /* CommentRepository.swift */; };
+		C86D84102B153279003FFEF5 /* CodeSmellsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D840F2B153279003FFEF5 /* CodeSmellsRepository.swift */; };
+		C86D84122B15329C003FFEF5 /* JSONConverterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84112B15329C003FFEF5 /* JSONConverterRepository.swift */; };
+		C86D84142B1532C0003FFEF5 /* UnitTestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84132B1532C0003FFEF5 /* UnitTestRepository.swift */; };
+		C86D84162B1532DE003FFEF5 /* DefaultCommentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84152B1532DE003FFEF5 /* DefaultCommentUseCase.swift */; };
+		C86D84182B1532FA003FFEF5 /* CommentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84172B1532FA003FFEF5 /* CommentUseCase.swift */; };
+		C86D841A2B153334003FFEF5 /* DefaultUnitTestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84192B153334003FFEF5 /* DefaultUnitTestUseCase.swift */; };
+		C86D841C2B153353003FFEF5 /* UnitTestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D841B2B153353003FFEF5 /* UnitTestUseCase.swift */; };
+		C86D841E2B153457003FFEF5 /* DefaultExplainCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D841D2B153457003FFEF5 /* DefaultExplainCodeUseCase.swift */; };
+		C86D84202B153479003FFEF5 /* ExplainCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D841F2B153479003FFEF5 /* ExplainCodeUseCase.swift */; };
+		C86D84222B153497003FFEF5 /* DefaultRegexUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84212B153497003FFEF5 /* DefaultRegexUseCase.swift */; };
+		C86D84242B1534B1003FFEF5 /* RegexUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84232B1534B1003FFEF5 /* RegexUseCase.swift */; };
+		C86D84262B1534C9003FFEF5 /* DefaultCodeSmellsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84252B1534C9003FFEF5 /* DefaultCodeSmellsUseCase.swift */; };
+		C86D84282B1534E6003FFEF5 /* CodeSmellsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84272B1534E6003FFEF5 /* CodeSmellsUseCase.swift */; };
+		C86D842A2B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84292B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift */; };
+		C86D842C2B15352A003FFEF5 /* JSONConverterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D842B2B15352A003FFEF5 /* JSONConverterUseCase.swift */; };
+		C86D84302B15371B003FFEF5 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D842F2B15371B003FFEF5 /* DependencyManager.swift */; };
+		C86D84322B1537B2003FFEF5 /* ChatService+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84312B1537B2003FFEF5 /* ChatService+Operations.swift */; };
+		C86D84352B15A747003FFEF5 /* CodeRefactorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84342B15A747003FFEF5 /* CodeRefactorCommand.swift */; };
+		C86D84382B15A93F003FFEF5 /* RefactorCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84372B15A93F003FFEF5 /* RefactorCodeUseCase.swift */; };
+		C86D843A2B15A94C003FFEF5 /* DefaultRefactorCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84392B15A94C003FFEF5 /* DefaultRefactorCodeUseCase.swift */; };
+		C86D843C2B15AAE1003FFEF5 /* RefactorCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D843B2B15AAE1003FFEF5 /* RefactorCodeRepository.swift */; };
+		C86D843E2B15AC5C003FFEF5 /* XcodeGPTRefactorCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D843D2B15AC5C003FFEF5 /* XcodeGPTRefactorCodeRepository.swift */; };
+		C89A6FC52B1FAEAA00748C05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89A6FBF2B1FAEAA00748C05 /* Assets.xcassets */; };
+		C89A6FC62B1FAEAA00748C05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89A6FC12B1FAEAA00748C05 /* Preview Assets.xcassets */; };
+		C89A6FC72B1FAEAA00748C05 /* XcodeGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A6FC22B1FAEAA00748C05 /* XcodeGPTApp.swift */; };
+		C89A6FC82B1FAEAA00748C05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A6FC42B1FAEAA00748C05 /* ContentView.swift */; };
+		C89A6FCA2B1FC79B00748C05 /* XcodeExtension+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A6FC92B1FC79B00748C05 /* XcodeExtension+Helper.swift */; };
+		C89A6FCC2B1FDC9B00748C05 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A6FCB2B1FDC9B00748C05 /* Localizable.swift */; };
+		C8C080462B17F6CD00EFFAD3 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C080452B17F6CD00EFFAD3 /* Environment.swift */; };
+		C8C979702B0D7DD1003FF773 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C9796F2B0D7DD0003FF773 /* Cocoa.framework */; };
+		C8C9797C2B0D7DD1003FF773 /* XcodeGPTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C8C9796D2B0D7DD0003FF773 /* XcodeGPTExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C8C979812B0D7DE6003FF773 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C979712B0D7DD1003FF773 /* XcodeKit.framework */; };
+		C8C979822B0D7DE6003FF773 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8C979712B0D7DD1003FF773 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8C9797A2B0D7DD1003FF773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8C9794F2B0D7DA7003FF773 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8C9796C2B0D7DD0003FF773;
+			remoteInfo = ChatGPTExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8C979802B0D7DD1003FF773 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C8C9797C2B0D7DD1003FF773 /* XcodeGPTExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C979832B0D7DE6003FF773 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8C979822B0D7DE6003FF773 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C8420C192B1A853D0011C26A /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		C8420C1A2B1A853D0011C26A /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		C8420C1B2B1A853D0011C26A /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		C8420C1F2B1A854B0011C26A /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		C8420C212B1A999E0011C26A /* LanguageModelConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModelConfig.swift; sourceTree = "<group>"; };
+		C8420C232B1AA0D20011C26A /* LanguageModelConfigBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModelConfigBuilder.swift; sourceTree = "<group>"; };
+		C86D83D52B151DBD003FFEF5 /* UnitTestEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestEditorCommand.swift; sourceTree = "<group>"; };
+		C86D83D72B151E05003FFEF5 /* ExplainCodeCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainCodeCommand.swift; sourceTree = "<group>"; };
+		C86D83D92B151E36003FFEF5 /* CommentCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCommand.swift; sourceTree = "<group>"; };
+		C86D83DB2B151E5D003FFEF5 /* RegexCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexCommand.swift; sourceTree = "<group>"; };
+		C86D83DD2B151E84003FFEF5 /* CodeSmellsEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSmellsEditorCommand.swift; sourceTree = "<group>"; };
+		C86D83DF2B151EA9003FFEF5 /* JSON2SwiftEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON2SwiftEditorCommand.swift; sourceTree = "<group>"; };
+		C86D83E32B15216B003FFEF5 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		C86D83E52B1523FB003FFEF5 /* ConverterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterError.swift; sourceTree = "<group>"; };
+		C86D83E72B152420003FFEF5 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		C86D83E92B1524B3003FFEF5 /* BaseXcodeGPTRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXcodeGPTRepository.swift; sourceTree = "<group>"; };
+		C86D83EB2B1524D7003FFEF5 /* XcodeGPTUnitTestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPTUnitTestRepository.swift; sourceTree = "<group>"; };
+		C86D83ED2B1524FE003FFEF5 /* XcodeGPTRegexRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPTRegexRepository.swift; sourceTree = "<group>"; };
+		C86D83EF2B152528003FFEF5 /* XcodeGPTJSONConverterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPTJSONConverterRepository.swift; sourceTree = "<group>"; };
+		C86D83F12B15254D003FFEF5 /* XcodeGPTCodeSmellsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPTCodeSmellsRepository.swift; sourceTree = "<group>"; };
+		C86D83F32B15256C003FFEF5 /* XcodeGPTExplainCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPTExplainCodeRepository.swift; sourceTree = "<group>"; };
+		C86D83F52B152589003FFEF5 /* XcodeGPTCommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPTCommentRepository.swift; sourceTree = "<group>"; };
+		C86D83F92B152F78003FFEF5 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		C86D83FD2B152FC3003FFEF5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C86D83FF2B152FE5003FFEF5 /* ChatGPTRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTRequestBody.swift; sourceTree = "<group>"; };
+		C86D84012B153007003FFEF5 /* ChatGPTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTResponse.swift; sourceTree = "<group>"; };
+		C86D84032B153029003FFEF5 /* ChatGPTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTError.swift; sourceTree = "<group>"; };
+		C86D84052B153056003FFEF5 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		C86D84072B1530B9003FFEF5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C86D84092B153224003FFEF5 /* ExplainCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainCodeRepository.swift; sourceTree = "<group>"; };
+		C86D840B2B153240003FFEF5 /* RegexRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexRepository.swift; sourceTree = "<group>"; };
+		C86D840D2B15325F003FFEF5 /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
+		C86D840F2B153279003FFEF5 /* CodeSmellsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSmellsRepository.swift; sourceTree = "<group>"; };
+		C86D84112B15329C003FFEF5 /* JSONConverterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverterRepository.swift; sourceTree = "<group>"; };
+		C86D84132B1532C0003FFEF5 /* UnitTestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestRepository.swift; sourceTree = "<group>"; };
+		C86D84152B1532DE003FFEF5 /* DefaultCommentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCommentUseCase.swift; sourceTree = "<group>"; };
+		C86D84172B1532FA003FFEF5 /* CommentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentUseCase.swift; sourceTree = "<group>"; };
+		C86D84192B153334003FFEF5 /* DefaultUnitTestUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUnitTestUseCase.swift; sourceTree = "<group>"; };
+		C86D841B2B153353003FFEF5 /* UnitTestUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestUseCase.swift; sourceTree = "<group>"; };
+		C86D841D2B153457003FFEF5 /* DefaultExplainCodeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultExplainCodeUseCase.swift; sourceTree = "<group>"; };
+		C86D841F2B153479003FFEF5 /* ExplainCodeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainCodeUseCase.swift; sourceTree = "<group>"; };
+		C86D84212B153497003FFEF5 /* DefaultRegexUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRegexUseCase.swift; sourceTree = "<group>"; };
+		C86D84232B1534B1003FFEF5 /* RegexUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexUseCase.swift; sourceTree = "<group>"; };
+		C86D84252B1534C9003FFEF5 /* DefaultCodeSmellsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCodeSmellsUseCase.swift; sourceTree = "<group>"; };
+		C86D84272B1534E6003FFEF5 /* CodeSmellsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSmellsUseCase.swift; sourceTree = "<group>"; };
+		C86D84292B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultJSONConverterUseCase.swift; sourceTree = "<group>"; };
+		C86D842B2B15352A003FFEF5 /* JSONConverterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverterUseCase.swift; sourceTree = "<group>"; };
+		C86D842D2B153614003FFEF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86D842F2B15371B003FFEF5 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		C86D84312B1537B2003FFEF5 /* ChatService+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatService+Operations.swift"; sourceTree = "<group>"; };
+		C86D84342B15A747003FFEF5 /* CodeRefactorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRefactorCommand.swift; sourceTree = "<group>"; };
+		C86D84372B15A93F003FFEF5 /* RefactorCodeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorCodeUseCase.swift; sourceTree = "<group>"; };
+		C86D84392B15A94C003FFEF5 /* DefaultRefactorCodeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRefactorCodeUseCase.swift; sourceTree = "<group>"; };
+		C86D843B2B15AAE1003FFEF5 /* RefactorCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorCodeRepository.swift; sourceTree = "<group>"; };
+		C86D843D2B15AC5C003FFEF5 /* XcodeGPTRefactorCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeGPTRefactorCodeRepository.swift; sourceTree = "<group>"; };
+		C89A6FBF2B1FAEAA00748C05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C89A6FC12B1FAEAA00748C05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C89A6FC22B1FAEAA00748C05 /* XcodeGPTApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeGPTApp.swift; sourceTree = "<group>"; };
+		C89A6FC32B1FAEAA00748C05 /* XcodeGPT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = XcodeGPT.entitlements; sourceTree = "<group>"; };
+		C89A6FC42B1FAEAA00748C05 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C89A6FC92B1FC79B00748C05 /* XcodeExtension+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XcodeExtension+Helper.swift"; sourceTree = "<group>"; };
+		C89A6FCB2B1FDC9B00748C05 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		C8C080422B171D7D00EFFAD3 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		C8C080432B171D9600EFFAD3 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		C8C080442B171F1000EFFAD3 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		C8C080452B17F6CD00EFFAD3 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		C8C979572B0D7DA7003FF773 /* XcodeGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C9796D2B0D7DD0003FF773 /* XcodeGPTExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XcodeGPTExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C9796F2B0D7DD0003FF773 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C8C979712B0D7DD1003FF773 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		C8C979792B0D7DD1003FF773 /* XcodeGPTExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeGPTExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8C979542B0D7DA7003FF773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C9796A2B0D7DD0003FF773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8C979702B0D7DD1003FF773 /* Cocoa.framework in Frameworks */,
+				C8C979812B0D7DE6003FF773 /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8420C182B1A84FF0011C26A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C89A6FCB2B1FDC9B00748C05 /* Localizable.swift */,
+				C8420C1A2B1A853D0011C26A /* Logging.swift */,
+				C8420C192B1A853D0011C26A /* NetworkLogger.swift */,
+				C8420C1B2B1A853D0011C26A /* URL+Extensions.swift */,
+				C8420C1F2B1A854B0011C26A /* String+Extensions.swift */,
+				C89A6FC92B1FC79B00748C05 /* XcodeExtension+Helper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C86D84332B15A740003FFEF5 /* CodeRefactor */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84342B15A747003FFEF5 /* CodeRefactorCommand.swift */,
+			);
+			path = CodeRefactor;
+			sourceTree = "<group>";
+		};
+		C86D84362B15A923003FFEF5 /* RefactorCode */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84372B15A93F003FFEF5 /* RefactorCodeUseCase.swift */,
+				C86D84392B15A94C003FFEF5 /* DefaultRefactorCodeUseCase.swift */,
+			);
+			path = RefactorCode;
+			sourceTree = "<group>";
+		};
+		C89A6FBE2B1FAEAA00748C05 /* XcodeGPT */ = {
+			isa = PBXGroup;
+			children = (
+				C89A6FBF2B1FAEAA00748C05 /* Assets.xcassets */,
+				C89A6FC02B1FAEAA00748C05 /* Preview Content */,
+				C89A6FC22B1FAEAA00748C05 /* XcodeGPTApp.swift */,
+				C89A6FC32B1FAEAA00748C05 /* XcodeGPT.entitlements */,
+				C89A6FC42B1FAEAA00748C05 /* ContentView.swift */,
+			);
+			path = XcodeGPT;
+			sourceTree = "<group>";
+		};
+		C89A6FC02B1FAEAA00748C05 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C89A6FC12B1FAEAA00748C05 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8C080412B171D3800EFFAD3 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				C8C080422B171D7D00EFFAD3 /* Debug.xcconfig */,
+				C8C080432B171D9600EFFAD3 /* Release.xcconfig */,
+				C8C080442B171F1000EFFAD3 /* Common.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		C8C9794E2B0D7DA7003FF773 = {
+			isa = PBXGroup;
+			children = (
+				C89A6FBE2B1FAEAA00748C05 /* XcodeGPT */,
+				C8C080412B171D3800EFFAD3 /* Configurations */,
+				C8C979732B0D7DD1003FF773 /* XcodeGPTExtension */,
+				C8C9796E2B0D7DD0003FF773 /* Frameworks */,
+				C8C979582B0D7DA7003FF773 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8C979582B0D7DA7003FF773 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8C979572B0D7DA7003FF773 /* XcodeGPT.app */,
+				C8C9796D2B0D7DD0003FF773 /* XcodeGPTExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8C9796E2B0D7DD0003FF773 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8C9796F2B0D7DD0003FF773 /* Cocoa.framework */,
+				C8C979712B0D7DD1003FF773 /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8C979732B0D7DD1003FF773 /* XcodeGPTExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C8420C182B1A84FF0011C26A /* Utilities */,
+				C8C9799D2B0D7F9E003FF773 /* Commands */,
+				C8C979842B0D7F9E003FF773 /* Data */,
+				C8C979AB2B0D7F9E003FF773 /* Domain */,
+				C8C979CA2B0D7F9E003FF773 /* Infrastructure */,
+				C86D842D2B153614003FFEF5 /* Info.plist */,
+				C8C979792B0D7DD1003FF773 /* XcodeGPTExtension.entitlements */,
+			);
+			path = XcodeGPTExtension;
+			sourceTree = "<group>";
+		};
+		C8C979842B0D7F9E003FF773 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C8C979852B0D7F9E003FF773 /* Network */,
+				C8C979952B0D7F9E003FF773 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C8C979852B0D7F9E003FF773 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C8C979862B0D7F9E003FF773 /* ChatService */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C8C979862B0D7F9E003FF773 /* ChatService */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83F92B152F78003FFEF5 /* ChatService.swift */,
+				C8C979892B0D7F9E003FF773 /* Resources */,
+				C8C9798D2B0D7F9E003FF773 /* Extensions */,
+				C8C9798F2B0D7F9E003FF773 /* Model */,
+			);
+			path = ChatService;
+			sourceTree = "<group>";
+		};
+		C8C979892B0D7F9E003FF773 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84072B1530B9003FFEF5 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C8C9798D2B0D7F9E003FF773 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84312B1537B2003FFEF5 /* ChatService+Operations.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C8C9798F2B0D7F9E003FF773 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83FD2B152FC3003FFEF5 /* Constants.swift */,
+				C86D83FF2B152FE5003FFEF5 /* ChatGPTRequestBody.swift */,
+				C86D84012B153007003FFEF5 /* ChatGPTResponse.swift */,
+				C86D84032B153029003FFEF5 /* ChatGPTError.swift */,
+				C86D84052B153056003FFEF5 /* NetworkRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8C979952B0D7F9E003FF773 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83E92B1524B3003FFEF5 /* BaseXcodeGPTRepository.swift */,
+				C86D83EB2B1524D7003FFEF5 /* XcodeGPTUnitTestRepository.swift */,
+				C86D83ED2B1524FE003FFEF5 /* XcodeGPTRegexRepository.swift */,
+				C86D83EF2B152528003FFEF5 /* XcodeGPTJSONConverterRepository.swift */,
+				C86D83F12B15254D003FFEF5 /* XcodeGPTCodeSmellsRepository.swift */,
+				C86D83F32B15256C003FFEF5 /* XcodeGPTExplainCodeRepository.swift */,
+				C86D83F52B152589003FFEF5 /* XcodeGPTCommentRepository.swift */,
+				C86D843D2B15AC5C003FFEF5 /* XcodeGPTRefactorCodeRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C8C9799D2B0D7F9E003FF773 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84332B15A740003FFEF5 /* CodeRefactor */,
+				C8C9799E2B0D7F9E003FF773 /* UnitTest */,
+				C8C979A02B0D7F9E003FF773 /* ExplainCode */,
+				C8C979A22B0D7F9E003FF773 /* Comment */,
+				C8C979A42B0D7F9E003FF773 /* Regex */,
+				C8C979A62B0D7F9E003FF773 /* CodeSmells */,
+				C8C979A82B0D7F9E003FF773 /* JSON2Swift */,
+				C86D83E32B15216B003FFEF5 /* SourceEditorExtension.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		C8C9799E2B0D7F9E003FF773 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83D52B151DBD003FFEF5 /* UnitTestEditorCommand.swift */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		C8C979A02B0D7F9E003FF773 /* ExplainCode */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83D72B151E05003FFEF5 /* ExplainCodeCommand.swift */,
+			);
+			path = ExplainCode;
+			sourceTree = "<group>";
+		};
+		C8C979A22B0D7F9E003FF773 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83D92B151E36003FFEF5 /* CommentCommand.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		C8C979A42B0D7F9E003FF773 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83DB2B151E5D003FFEF5 /* RegexCommand.swift */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
+		C8C979A62B0D7F9E003FF773 /* CodeSmells */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83DD2B151E84003FFEF5 /* CodeSmellsEditorCommand.swift */,
+			);
+			path = CodeSmells;
+			sourceTree = "<group>";
+		};
+		C8C979A82B0D7F9E003FF773 /* JSON2Swift */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83DF2B151EA9003FFEF5 /* JSON2SwiftEditorCommand.swift */,
+			);
+			path = JSON2Swift;
+			sourceTree = "<group>";
+		};
+		C8C979AB2B0D7F9E003FF773 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C8C979AC2B0D7F9E003FF773 /* Repositories */,
+				C8C979B32B0D7F9E003FF773 /* Model */,
+				C8C979B62B0D7F9E003FF773 /* UseCase */,
+				C8420C232B1AA0D20011C26A /* LanguageModelConfigBuilder.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C8C979AC2B0D7F9E003FF773 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84092B153224003FFEF5 /* ExplainCodeRepository.swift */,
+				C86D840B2B153240003FFEF5 /* RegexRepository.swift */,
+				C86D840D2B15325F003FFEF5 /* CommentRepository.swift */,
+				C86D840F2B153279003FFEF5 /* CodeSmellsRepository.swift */,
+				C86D84112B15329C003FFEF5 /* JSONConverterRepository.swift */,
+				C86D84132B1532C0003FFEF5 /* UnitTestRepository.swift */,
+				C86D843B2B15AAE1003FFEF5 /* RefactorCodeRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C8C979B32B0D7F9E003FF773 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C86D83E52B1523FB003FFEF5 /* ConverterError.swift */,
+				C86D83E72B152420003FFEF5 /* Suggestion.swift */,
+				C8420C212B1A999E0011C26A /* LanguageModelConfig.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8C979B62B0D7F9E003FF773 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84362B15A923003FFEF5 /* RefactorCode */,
+				C8C979B72B0D7F9E003FF773 /* Comments */,
+				C8C979BA2B0D7F9E003FF773 /* UnitTest */,
+				C8C979BD2B0D7F9E003FF773 /* ExplainCode */,
+				C8C979C12B0D7F9E003FF773 /* Regex */,
+				C8C979C42B0D7F9E003FF773 /* CodeSmells */,
+				C8C979C72B0D7F9E003FF773 /* JSON2Swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		C8C979B72B0D7F9E003FF773 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84152B1532DE003FFEF5 /* DefaultCommentUseCase.swift */,
+				C86D84172B1532FA003FFEF5 /* CommentUseCase.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		C8C979BA2B0D7F9E003FF773 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84192B153334003FFEF5 /* DefaultUnitTestUseCase.swift */,
+				C86D841B2B153353003FFEF5 /* UnitTestUseCase.swift */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		C8C979BD2B0D7F9E003FF773 /* ExplainCode */ = {
+			isa = PBXGroup;
+			children = (
+				C86D841D2B153457003FFEF5 /* DefaultExplainCodeUseCase.swift */,
+				C86D841F2B153479003FFEF5 /* ExplainCodeUseCase.swift */,
+			);
+			path = ExplainCode;
+			sourceTree = "<group>";
+		};
+		C8C979C12B0D7F9E003FF773 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84212B153497003FFEF5 /* DefaultRegexUseCase.swift */,
+				C86D84232B1534B1003FFEF5 /* RegexUseCase.swift */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
+		C8C979C42B0D7F9E003FF773 /* CodeSmells */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84252B1534C9003FFEF5 /* DefaultCodeSmellsUseCase.swift */,
+				C86D84272B1534E6003FFEF5 /* CodeSmellsUseCase.swift */,
+			);
+			path = CodeSmells;
+			sourceTree = "<group>";
+		};
+		C8C979C72B0D7F9E003FF773 /* JSON2Swift */ = {
+			isa = PBXGroup;
+			children = (
+				C86D84292B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift */,
+				C86D842B2B15352A003FFEF5 /* JSONConverterUseCase.swift */,
+			);
+			path = JSON2Swift;
+			sourceTree = "<group>";
+		};
+		C8C979CA2B0D7F9E003FF773 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				C8C979CB2B0D7F9E003FF773 /* Dependencies */,
+				C8C080452B17F6CD00EFFAD3 /* Environment.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C8C979CB2B0D7F9E003FF773 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C86D842F2B15371B003FFEF5 /* DependencyManager.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8C979562B0D7DA7003FF773 /* XcodeGPT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8C979662B0D7DA8003FF773 /* Build configuration list for PBXNativeTarget "XcodeGPT" */;
+			buildPhases = (
+				C8C979532B0D7DA7003FF773 /* Sources */,
+				C8C979542B0D7DA7003FF773 /* Frameworks */,
+				C8C979552B0D7DA7003FF773 /* Resources */,
+				C8C979802B0D7DD1003FF773 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8C9797B2B0D7DD1003FF773 /* PBXTargetDependency */,
+			);
+			name = XcodeGPT;
+			productName = ChatGPT;
+			productReference = C8C979572B0D7DA7003FF773 /* XcodeGPT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8C9796C2B0D7DD0003FF773 /* XcodeGPTExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8C9797D2B0D7DD1003FF773 /* Build configuration list for PBXNativeTarget "XcodeGPTExtension" */;
+			buildPhases = (
+				C8C979692B0D7DD0003FF773 /* Sources */,
+				C8C9796A2B0D7DD0003FF773 /* Frameworks */,
+				C8C9796B2B0D7DD0003FF773 /* Resources */,
+				C8C979832B0D7DE6003FF773 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XcodeGPTExtension;
+			productName = ChatGPTExtension;
+			productReference = C8C9796D2B0D7DD0003FF773 /* XcodeGPTExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8C9794F2B0D7DA7003FF773 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C8C979562B0D7DA7003FF773 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					C8C9796C2B0D7DD0003FF773 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = C8C979522B0D7DA7003FF773 /* Build configuration list for PBXProject "XcodeGPT" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8C9794E2B0D7DA7003FF773;
+			productRefGroup = C8C979582B0D7DA7003FF773 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8C979562B0D7DA7003FF773 /* XcodeGPT */,
+				C8C9796C2B0D7DD0003FF773 /* XcodeGPTExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8C979552B0D7DA7003FF773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C89A6FC62B1FAEAA00748C05 /* Preview Assets.xcassets in Resources */,
+				C89A6FC52B1FAEAA00748C05 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C9796B2B0D7DD0003FF773 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C86D84082B1530B9003FFEF5 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8C979532B0D7DA7003FF773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C89A6FC72B1FAEAA00748C05 /* XcodeGPTApp.swift in Sources */,
+				C89A6FC82B1FAEAA00748C05 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C979692B0D7DD0003FF773 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C86D83D82B151E05003FFEF5 /* ExplainCodeCommand.swift in Sources */,
+				C86D83E02B151EA9003FFEF5 /* JSON2SwiftEditorCommand.swift in Sources */,
+				C86D83DE2B151E84003FFEF5 /* CodeSmellsEditorCommand.swift in Sources */,
+				C86D83DC2B151E5D003FFEF5 /* RegexCommand.swift in Sources */,
+				C8420C1D2B1A853D0011C26A /* Logging.swift in Sources */,
+				C86D83DA2B151E36003FFEF5 /* CommentCommand.swift in Sources */,
+				C86D83D62B151DBD003FFEF5 /* UnitTestEditorCommand.swift in Sources */,
+				C86D83E62B1523FB003FFEF5 /* ConverterError.swift in Sources */,
+				C86D83EA2B1524B3003FFEF5 /* BaseXcodeGPTRepository.swift in Sources */,
+				C86D84322B1537B2003FFEF5 /* ChatService+Operations.swift in Sources */,
+				C86D83F02B152528003FFEF5 /* XcodeGPTJSONConverterRepository.swift in Sources */,
+				C8420C242B1AA0D20011C26A /* LanguageModelConfigBuilder.swift in Sources */,
+				C86D83F62B152589003FFEF5 /* XcodeGPTCommentRepository.swift in Sources */,
+				C86D83FA2B152F78003FFEF5 /* ChatService.swift in Sources */,
+				C86D84002B152FE5003FFEF5 /* ChatGPTRequestBody.swift in Sources */,
+				C86D84022B153007003FFEF5 /* ChatGPTResponse.swift in Sources */,
+				C86D843E2B15AC5C003FFEF5 /* XcodeGPTRefactorCodeRepository.swift in Sources */,
+				C8420C1E2B1A853D0011C26A /* URL+Extensions.swift in Sources */,
+				C86D843A2B15A94C003FFEF5 /* DefaultRefactorCodeUseCase.swift in Sources */,
+				C86D84382B15A93F003FFEF5 /* RefactorCodeUseCase.swift in Sources */,
+				C8C080462B17F6CD00EFFAD3 /* Environment.swift in Sources */,
+				C86D84062B153056003FFEF5 /* NetworkRequest.swift in Sources */,
+				C89A6FCC2B1FDC9B00748C05 /* Localizable.swift in Sources */,
+				C8420C1C2B1A853D0011C26A /* NetworkLogger.swift in Sources */,
+				C86D840A2B153224003FFEF5 /* ExplainCodeRepository.swift in Sources */,
+				C86D84102B153279003FFEF5 /* CodeSmellsRepository.swift in Sources */,
+				C86D84182B1532FA003FFEF5 /* CommentUseCase.swift in Sources */,
+				C86D841A2B153334003FFEF5 /* DefaultUnitTestUseCase.swift in Sources */,
+				C8420C202B1A854B0011C26A /* String+Extensions.swift in Sources */,
+				C86D841E2B153457003FFEF5 /* DefaultExplainCodeUseCase.swift in Sources */,
+				C86D84202B153479003FFEF5 /* ExplainCodeUseCase.swift in Sources */,
+				C86D84242B1534B1003FFEF5 /* RegexUseCase.swift in Sources */,
+				C86D842A2B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift in Sources */,
+				C86D84352B15A747003FFEF5 /* CodeRefactorCommand.swift in Sources */,
+				C86D84302B15371B003FFEF5 /* DependencyManager.swift in Sources */,
+				C86D842C2B15352A003FFEF5 /* JSONConverterUseCase.swift in Sources */,
+				C8420C222B1A999E0011C26A /* LanguageModelConfig.swift in Sources */,
+				C86D84282B1534E6003FFEF5 /* CodeSmellsUseCase.swift in Sources */,
+				C86D84262B1534C9003FFEF5 /* DefaultCodeSmellsUseCase.swift in Sources */,
+				C86D84222B153497003FFEF5 /* DefaultRegexUseCase.swift in Sources */,
+				C86D841C2B153353003FFEF5 /* UnitTestUseCase.swift in Sources */,
+				C86D84162B1532DE003FFEF5 /* DefaultCommentUseCase.swift in Sources */,
+				C86D84142B1532C0003FFEF5 /* UnitTestRepository.swift in Sources */,
+				C86D84122B15329C003FFEF5 /* JSONConverterRepository.swift in Sources */,
+				C86D840E2B15325F003FFEF5 /* CommentRepository.swift in Sources */,
+				C86D840C2B153240003FFEF5 /* RegexRepository.swift in Sources */,
+				C86D84042B153029003FFEF5 /* ChatGPTError.swift in Sources */,
+				C86D843C2B15AAE1003FFEF5 /* RefactorCodeRepository.swift in Sources */,
+				C86D83FE2B152FC3003FFEF5 /* Constants.swift in Sources */,
+				C89A6FCA2B1FC79B00748C05 /* XcodeExtension+Helper.swift in Sources */,
+				C86D83F42B15256C003FFEF5 /* XcodeGPTExplainCodeRepository.swift in Sources */,
+				C86D83F22B15254D003FFEF5 /* XcodeGPTCodeSmellsRepository.swift in Sources */,
+				C86D83EE2B1524FE003FFEF5 /* XcodeGPTRegexRepository.swift in Sources */,
+				C86D83EC2B1524D7003FFEF5 /* XcodeGPTUnitTestRepository.swift in Sources */,
+				C86D83E82B152420003FFEF5 /* Suggestion.swift in Sources */,
+				C86D83E42B15216B003FFEF5 /* SourceEditorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8C9797B2B0D7DD1003FF773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8C9796C2B0D7DD0003FF773 /* XcodeGPTExtension */;
+			targetProxy = C8C9797A2B0D7DD1003FF773 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C8C979642B0D7DA8003FF773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C080422B171D7D00EFFAD3 /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8C979652B0D7DA8003FF773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C080432B171D9600EFFAD3 /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C8C979672B0D7DA8003FF773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C080422B171D7D00EFFAD3 /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XcodeGPT/XcodeGPT.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XcodeGPT/Preview Content\"";
+				DEVELOPMENT_TEAM = JUH253PV4S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.newera.XcodeGPT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C8C979682B0D7DA8003FF773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C080432B171D9600EFFAD3 /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XcodeGPT/XcodeGPT.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XcodeGPT/Preview Content\"";
+				DEVELOPMENT_TEAM = JUH253PV4S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.newera.XcodeGPT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C8C9797E2B0D7DD1003FF773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C080422B171D7D00EFFAD3 /* Debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XcodeGPTExtension/XcodeGPTExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JUH253PV4S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XcodeGPTExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XcodeGPTExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.newera.XcodeGPT.XcodeGPTExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C8C9797F2B0D7DD1003FF773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C080432B171D9600EFFAD3 /* Release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XcodeGPTExtension/XcodeGPTExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JUH253PV4S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XcodeGPTExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XcodeGPTExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.newera.XcodeGPT.XcodeGPTExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8C979522B0D7DA7003FF773 /* Build configuration list for PBXProject "XcodeGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C979642B0D7DA8003FF773 /* Debug */,
+				C8C979652B0D7DA8003FF773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8C979662B0D7DA8003FF773 /* Build configuration list for PBXNativeTarget "XcodeGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C979672B0D7DA8003FF773 /* Debug */,
+				C8C979682B0D7DA8003FF773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8C9797D2B0D7DD1003FF773 /* Build configuration list for PBXNativeTarget "XcodeGPTExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C9797E2B0D7DD1003FF773 /* Debug */,
+				C8C9797F2B0D7DD1003FF773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8C9794F2B0D7DA7003FF773 /* Project object */;
+}

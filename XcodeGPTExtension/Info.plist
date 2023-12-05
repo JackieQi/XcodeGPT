@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LLM_MODEL_NAME</key>
+	<string>${LLM_MODEL_NAME}</string>
+	<key>OPENAI_API_KEY</key>
+	<string>${OPENAI_API_KEY}</string>
+	<key>FLAG_LM_STUDIO</key>
+	<string>${USE_LM_STUDIO}</string>
+	<key>FLAG_TEXT_WEB_UI</key>
+	<string>${USE_TEXT_WEB_UI}</string>
+	<key>WEB_SERVER_URL</key>
+	<string>${WEB_SERVER_URL}</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>XCSourceEditorCommandDefinitions</key>
+			<array>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).CodeRefactorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).CodeRefactorCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>[Refactor] Refactor Code</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).JSON2SwiftEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).JSON2SwiftEditorCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>[JSON] JSON to Swift</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).CodeSmellsEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).CodeSmellsEditorCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>[Code Smell] Check for Code Smells</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).ExplainCodeCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).ExplainCodeCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>[Explain] Explain me this code</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).UnitTestEditorCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).UnitTestEditorCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>[Test] Generate tests for this function</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).RegexCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).RegexCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>[Regex] Generate regular expression</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).CommentCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).CommentCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>[Comment] Add Swift comments</string>
+				</dict>
+			</array>
+			<key>XCSourceEditorExtensionPrincipalClass</key>
+			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>
+		</dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.dt.Xcode.extension.source-editor</string>
+	</dict>
+</dict>
+</plist>

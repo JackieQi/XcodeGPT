@@ -1,0 +1,21 @@
+//
+//  Common.xcconfig
+//  XcodeGPT
+//
+//  Created by Jackie Qi on 11/28/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// use LM Studio as local LLM server (https://lmstudio.ai/)
+//USE_LM_STUDIO=TRUE
+//WEB_SERVER_URL=http:/$()/127.0.0.1:1234
+
+// use LM Studio as local LLM server (https://github.com/oobabooga/text-generation-webui/)
+USE_TEXT_WEB_UI=TRUE
+WEB_SERVER_URL=http:/$()/127.0.0.1:5000
+
+// openAI config
+//WEB_SERVER_URL = https:/$()/api.openai.com
+LLM_MODEL_NAME = "gpt-3.5-turbo"
