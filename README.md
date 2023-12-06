@@ -5,7 +5,7 @@
 [![Twitter](https://img.shields.io/badge/twitter-%40JackieQi-blue.svg?style=social)](https://twitter.com/JackieQi)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-JackieQi-blue.svg?style=social)](https://www.linkedin.com/in/chiqi/)
 
-# ChatGPT 4 Xcode with Local LLM
+# ChatGPT 4 Xcode with Self-Hosted LLM
 
 This project builds Xcode source editor extension, allows the developer to use chatGPT(openAI) or local LLM for their code.
 
@@ -14,6 +14,7 @@ This project builds Xcode source editor extension, allows the developer to use c
 </p>
 
 ## Features
+* Refactor code
 * Check code smells (whole file or selected lines)
 * Convert json file to swift code
 * Add comment to selected function
@@ -24,7 +25,7 @@ This project builds Xcode source editor extension, allows the developer to use c
 ## Architecture
 [Repository Pattern](https://medium.com/tiendeo-tech/ios-repository-pattern-in-swift-85a8c62bf436)
 <p align="center">
-  <img src="Assets/Mobile Repository Pattern.png" width="800" height="857"/>
+  <img src="Assets/Mobile Repository Pattern.png" width="700" height="750"/>
 </p>
 
 
@@ -77,7 +78,7 @@ Edit **ChatGPTExtension** scheme and select Xcode.app as [executable](Assets/Exe
 
 [StarCoder](https://huggingface.co/TheBloke/starcoderplus-GGML)
 
-*I used the models with 7B parameters to test which is much slower compared with openAI. Depends on your computer spec select the one which works best for you.*
+*I used the models with 7B parameters to test which is much slower compared with openAI. Depends on your computer spec, select the one which works best for you.*
 
 ## Popular Self-hosted Library/Client
 [llama.cpp](https://github.com/ggerganov/llama.cpp) The source project for GGUF. Offers a CLI and a server option.
@@ -100,3 +101,5 @@ Edit **ChatGPTExtension** scheme and select Xcode.app as [executable](Assets/Exe
 [Tips](https://nshipster.com/xcode-source-extensions/)
 
 [Local LLM Guide](https://bootcamp.uxdesign.cc/a-complete-guide-to-running-local-llm-models-3225e4913620)
+
+<a href="https://www.buymeacoffee.com/jackieqi" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
