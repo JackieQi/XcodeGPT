@@ -13,9 +13,9 @@
 //WEB_SERVER_URL=http:/$()/127.0.0.1:1234
 
 // use LM Studio as local LLM server (https://github.com/oobabooga/text-generation-webui/)
-USE_TEXT_WEB_UI=TRUE
-WEB_SERVER_URL=http:/$()/127.0.0.1:5000
+//USE_TEXT_WEB_UI=TRUE
+//WEB_SERVER_URL=http:/$()/127.0.0.1:5000
 
 // openAI config
-//WEB_SERVER_URL = https:/$()/api.openai.com
+WEB_SERVER_URL = https:/$()/api.openai.com
 LLM_MODEL_NAME = "gpt-3.5-turbo"
