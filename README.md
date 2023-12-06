@@ -64,6 +64,7 @@ Edit **ChatGPTExtension** scheme and select Xcode.app as [executable](Assets/Exe
 1. Define your prompt in [**Localizable**](https://github.com/JackieQi/XcodeGPT/blob/main/XcodeGPTExtension/Data/Network/ChatService/Resources/Localizable.xcstrings)
 2. Provide command name in [**Info.plist**](https://github.com/JackieQi/XcodeGPT/blob/main/XcodeGPTExtension/Info.plist)
 3. Create your Xcode command (use case, Repository, Command) files
+4. (Optional) Define [shortcut](Assets/Key_binding.png) to boost productivity
 
 ## TODO
 - [ ] support [LiteLLM](https://github.com/BerriAI/litellm) and other popular **Self-Hosted** solutions
