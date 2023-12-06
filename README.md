@@ -25,7 +25,7 @@ This project builds Xcode source editor extension, allows the developer to use c
 ## Architecture
 [Repository Pattern](https://medium.com/tiendeo-tech/ios-repository-pattern-in-swift-85a8c62bf436)
 <p align="center">
-  <img src="Assets/Mobile Repository Pattern.png" width="700" height="750"/>
+  <img src="Assets/Mobile_Repository_Pattern.png" width="600" height="653"/>
 </p>
 
 
