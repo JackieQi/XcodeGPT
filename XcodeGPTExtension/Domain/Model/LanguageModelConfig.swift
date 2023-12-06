@@ -28,12 +28,12 @@ public struct LanguageModelConfig {
     var apiKey: String?
     var modelName: String? // NOTE: Only OpenAI is using it right now
     var serverURL: URL
-    var chatMode: LLMChatMode
+    var chatMode: LLMChatMode?
     let serverType: SupportedChatServer
     
     init(apiKey: String? = nil, 
          modelName: String? = nil,
-         chatMode: LLMChatMode = .chat,
+         chatMode: LLMChatMode? = nil,
          serverURL: URL,
          serverType: SupportedChatServer) {
         self.apiKey = apiKey

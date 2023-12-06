@@ -14,7 +14,7 @@ struct LanguageModelConfigBuilder {
             return LanguageModelConfig(serverURL: serverURL, serverType: .LMStudio)
         } else if Environment.useTextUI,
             let serverURL = Environment.webServerURL {
-            return LanguageModelConfig(serverURL: serverURL, serverType: .WebUI)
+            return LanguageModelConfig(chatMode: .chat, serverURL: serverURL, serverType: .WebUI)
         } else {
             if let apiKey = Environment.apiKey,
                 let serverURL = Environment.webServerURL {

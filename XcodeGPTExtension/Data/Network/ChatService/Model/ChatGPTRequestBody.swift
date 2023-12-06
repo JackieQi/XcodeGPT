@@ -9,7 +9,7 @@ import Foundation
 
 struct ChatGPTRequestBody: Encodable {
     var model: String?
-    var mode: LLMChatMode
+    var mode: LLMChatMode?
     let messages: [ChatGPTRequestBody.Message]
     
     init(prompt: String, modelConfig: LanguageModelConfig) {
