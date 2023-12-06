@@ -54,7 +54,6 @@
 		C86D84282B1534E6003FFEF5 /* CodeSmellsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84272B1534E6003FFEF5 /* CodeSmellsUseCase.swift */; };
 		C86D842A2B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84292B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift */; };
 		C86D842C2B15352A003FFEF5 /* JSONConverterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D842B2B15352A003FFEF5 /* JSONConverterUseCase.swift */; };
-		C86D84302B15371B003FFEF5 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D842F2B15371B003FFEF5 /* DependencyManager.swift */; };
 		C86D84322B1537B2003FFEF5 /* ChatService+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84312B1537B2003FFEF5 /* ChatService+Operations.swift */; };
 		C86D84352B15A747003FFEF5 /* CodeRefactorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84342B15A747003FFEF5 /* CodeRefactorCommand.swift */; };
 		C86D84382B15A93F003FFEF5 /* RefactorCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D84372B15A93F003FFEF5 /* RefactorCodeUseCase.swift */; };
@@ -72,6 +71,7 @@
 		C8C9797C2B0D7DD1003FF773 /* XcodeGPTExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C8C9796D2B0D7DD0003FF773 /* XcodeGPTExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C8C979812B0D7DE6003FF773 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C979712B0D7DD1003FF773 /* XcodeKit.framework */; };
 		C8C979822B0D7DE6003FF773 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8C979712B0D7DD1003FF773 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C8F369A82B212BA0000E7E6A /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F369A72B212BA0000E7E6A /* DependencyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,7 +158,6 @@
 		C86D84292B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultJSONConverterUseCase.swift; sourceTree = "<group>"; };
 		C86D842B2B15352A003FFEF5 /* JSONConverterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverterUseCase.swift; sourceTree = "<group>"; };
 		C86D842D2B153614003FFEF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C86D842F2B15371B003FFEF5 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		C86D84312B1537B2003FFEF5 /* ChatService+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatService+Operations.swift"; sourceTree = "<group>"; };
 		C86D84342B15A747003FFEF5 /* CodeRefactorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRefactorCommand.swift; sourceTree = "<group>"; };
 		C86D84372B15A93F003FFEF5 /* RefactorCodeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactorCodeUseCase.swift; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		C8C9796F2B0D7DD0003FF773 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C8C979712B0D7DD1003FF773 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		C8C979792B0D7DD1003FF773 /* XcodeGPTExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeGPTExtension.entitlements; sourceTree = "<group>"; };
+		C8F369A72B212BA0000E7E6A /* DependencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,16 +546,16 @@
 		C8C979CA2B0D7F9E003FF773 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				C8C979CB2B0D7F9E003FF773 /* Dependencies */,
+				C8F369A62B212BA0000E7E6A /* Dependencies */,
 				C8C080452B17F6CD00EFFAD3 /* Environment.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
-		C8C979CB2B0D7F9E003FF773 /* Dependencies */ = {
+		C8F369A62B212BA0000E7E6A /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				C86D842F2B15371B003FFEF5 /* DependencyManager.swift */,
+				C8F369A72B212BA0000E7E6A /* DependencyManager.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -691,6 +691,7 @@
 				C8420C1E2B1A853D0011C26A /* URL+Extensions.swift in Sources */,
 				C86D843A2B15A94C003FFEF5 /* DefaultRefactorCodeUseCase.swift in Sources */,
 				C86D84382B15A93F003FFEF5 /* RefactorCodeUseCase.swift in Sources */,
+				C8F369A82B212BA0000E7E6A /* DependencyManager.swift in Sources */,
 				C8C080462B17F6CD00EFFAD3 /* Environment.swift in Sources */,
 				C86D84062B153056003FFEF5 /* NetworkRequest.swift in Sources */,
 				C89A6FCC2B1FDC9B00748C05 /* Localizable.swift in Sources */,
@@ -705,7 +706,6 @@
 				C86D84242B1534B1003FFEF5 /* RegexUseCase.swift in Sources */,
 				C86D842A2B15350B003FFEF5 /* DefaultJSONConverterUseCase.swift in Sources */,
 				C86D84352B15A747003FFEF5 /* CodeRefactorCommand.swift in Sources */,
-				C86D84302B15371B003FFEF5 /* DependencyManager.swift in Sources */,
 				C86D842C2B15352A003FFEF5 /* JSONConverterUseCase.swift in Sources */,
 				C8420C222B1A999E0011C26A /* LanguageModelConfig.swift in Sources */,
 				C86D84282B1534E6003FFEF5 /* CodeSmellsUseCase.swift in Sources */,
