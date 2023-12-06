@@ -30,7 +30,13 @@ This project builds Xcode source editor extension, allows the developer to use c
 
 
 ## Running OpenAI
-Rename *.env.example* to *.env* and add your openAI API key (.env file is already added to .gitignore along with .xcconfig files)
+Rename **.env.example** to **.env** and add your openAI API key (.env file is already added to .gitignore along with .xcconfig files)
+Original xcconfig files are in the repo. Avoid any modified version being uploaded. You can do this.
+```git update-index --assume-unchanged Configurations/*.xcconfig```
+
+To revert 
+
+```git update-index --no-assume-unchanged Configurations/*.xcconfig```
 
 **NOTE**: API key will be copied into Common.xcconfig when running the extension app with **ChatGPTExtension** scheme with a [Shell Script](Assets/Pre-actions.png) which is defined as **pre-actions** in the scheme.
 
