@@ -78,7 +78,7 @@ Edit **ChatGPTExtension** scheme and select Xcode.app as [executable](Assets/Exe
 
 [StarCoder](https://huggingface.co/TheBloke/starcoderplus-GGML)
 
-*I used the models with 7B parameters to test which is much slower compared with openAI. Depends on your computer spec, select the one which works best for you.*
+*I used the models with 7B parameters to test which is much slower compared with openAI. Depends on your computer spec, select the one which works best for you. Suggest to use LM Studio to download the models, it will show you if the model is [compatible](Assets/Model_compatibility.png) with your machine or not.*
 
 ## Popular Self-hosted Library/Client
 [llama.cpp](https://github.com/ggerganov/llama.cpp) The source project for GGUF. Offers a CLI and a server option.
