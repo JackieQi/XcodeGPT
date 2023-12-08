@@ -51,7 +51,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "What does this Swift code do?"
+            "value" : "Could you give me a general overview of this function? I'm interested in understanding what its main purpose is, how it generally operates, I don't need a line-by-line breakdown, just an overall explanation of its logic and functionality. Here's the function"
           }
         }
       }

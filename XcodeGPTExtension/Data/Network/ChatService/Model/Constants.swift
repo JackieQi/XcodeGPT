@@ -16,6 +16,5 @@ enum Constants {
     static let authorizationHeaderKey = "Authorization"
     static let authorizationHeaderValue = "Bearer"
     
-    static let modelChatGPTUser = "user"
+    static let defaultTemperature: Float = 0.11
 }
-

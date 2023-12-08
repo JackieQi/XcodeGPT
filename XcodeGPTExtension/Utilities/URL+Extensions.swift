@@ -25,7 +25,7 @@ public extension URLRequest {
             }
         }
         
-        if let body = httpBody, !body.isEmpty, let string = String(data: body, encoding: .utf8), !string.isEmpty {
+        if let body = httpBody, !body.isEmpty, let string = body.toJSONString(), !string.isEmpty {
             result += "-d '\(string)' \\\n"
         }
         

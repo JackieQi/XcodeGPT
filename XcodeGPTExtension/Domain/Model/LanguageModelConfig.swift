@@ -29,16 +29,19 @@ public struct LanguageModelConfig {
     var modelName: String? // NOTE: Only OpenAI is using it right now
     var serverURL: URL
     var chatMode: LLMChatMode?
+    var temperature: Float
     let serverType: SupportedChatServer
     
     init(apiKey: String? = nil, 
          modelName: String? = nil,
          chatMode: LLMChatMode? = nil,
+         temperature: Float = Constants.defaultTemperature,
          serverURL: URL,
          serverType: SupportedChatServer) {
         self.apiKey = apiKey
         self.modelName = modelName
         self.chatMode = chatMode
+        self.temperature = temperature
         self.serverURL = serverURL
         self.serverType = serverType
     }

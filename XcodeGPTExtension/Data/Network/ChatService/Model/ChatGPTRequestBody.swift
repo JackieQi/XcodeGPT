@@ -10,6 +10,7 @@ import Foundation
 struct ChatGPTRequestBody: Encodable {
     var model: String?
     var mode: LLMChatMode?
+    var temperature: Float?
     let messages: [ChatGPTRequestBody.Message]
     
     init(prompt: String, modelConfig: LanguageModelConfig) {
@@ -22,6 +23,7 @@ struct ChatGPTRequestBody: Encodable {
         
         self.model = modelConfig.modelName
         self.mode = modelConfig.chatMode
+        self.temperature = modelConfig.temperature
     }
 }
 
