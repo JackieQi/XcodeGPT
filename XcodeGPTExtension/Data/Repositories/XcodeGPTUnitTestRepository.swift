@@ -9,13 +9,13 @@ import Foundation
 
 final class XcodeGPTUnitTestRepository: BaseXcodeGPTRepository, UnitTestRepository {
     func generateTestsFor(source code: String) async throws -> [Suggestion] {
+        let chatService = try initializeChatService()
+        
         do {
-            let chatService = try initializeChatService()
             let chatGPTResponse = try await chatService.generateTestsFor(source: code)
-            return try processChatResponse(chatGPTResponse)
+            return processChatResponse(chatGPTResponse)
         }  catch let error {
-            try handleChatError(error)
-            return []
+            throw handleChatError(error)
         }
     }
 }

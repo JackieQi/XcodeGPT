@@ -15,7 +15,7 @@ final class DefaultCommentUseCase: CommentUseCase {
     }
     
     func comment(function code: [String]) async throws -> Suggestion {
-        let preparedCode = code.reduce("") { $0 + $1 }
+        let preparedCode = code.joined()
         
         let suggestions = try await self.repository.comment(function: preparedCode)
         

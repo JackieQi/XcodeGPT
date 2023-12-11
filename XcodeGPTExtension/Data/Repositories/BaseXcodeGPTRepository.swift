@@ -10,38 +10,25 @@ import Foundation
 class BaseXcodeGPTRepository {
     func initializeChatService() throws -> ChatService {
         let modelConfig = LanguageModelConfigBuilder.makeLanguageModelConfig()
-        let chat = ChatService(modelConfig: modelConfig)
-        return chat
+        return ChatService(modelConfig: modelConfig)
     }
     
-    func handleChatError(_ error: Error) throws {
+    func handleChatError(_ error: Error) -> ConverterError {
         switch error {
         case ChatGPTError.rateLimitReached:
-            throw ConverterError.rateLimit
+            return ConverterError.rateLimit
         case ChatGPTError.serverError:
-            throw ConverterError.serverError
+            return ConverterError.serverError
         case ChatGPTError.authentication:
-            throw ConverterError.authorization
+            return ConverterError.authorization
         case ChatGPTError.tokenLimitReached:
-            throw ConverterError.tokenLimit
+            return ConverterError.tokenLimit
         default:
-            throw ConverterError.unknownResponse
+            return ConverterError.unknownResponse
         }
     }
     
-    func processChatResponse(_ response: ChatGPTResponse) throws -> [Suggestion] {
-        var suggestions: [Suggestion]?
-        
-        suggestions = response.choices.map { choice in
-            let suggestion = Suggestion(result: choice.message.content)
-            
-            return suggestion
-        }
-        
-        guard let unwrappedSuggestions = suggestions else {
-            throw ConverterError.emptyResults
-        }
-        
-        return unwrappedSuggestions
+    func processChatResponse(_ response: ChatGPTResponse) -> [Suggestion] {
+        return response.choices.map { Suggestion(result: $0.message.content) }
     }
 }

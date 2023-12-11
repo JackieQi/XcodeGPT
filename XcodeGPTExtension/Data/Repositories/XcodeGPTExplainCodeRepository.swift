@@ -9,11 +9,12 @@ import Foundation
 
 final class XcodeGPTExplainCodeRepository: BaseXcodeGPTRepository, ExplainCodeRepository {
     func explainMeThis(code: String) async throws -> [Suggestion] {
+        let chatService = try initializeChatService()
+        
         do {
-            let chatService = try initializeChatService()
             let chatGPTResponse = try await chatService.explain(source: code)
             
-            return try processChatResponse(chatGPTResponse)
+            return processChatResponse(chatGPTResponse)
         }  catch let error {
             try handleChatError(error)
             return []

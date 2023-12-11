@@ -17,5 +17,5 @@
 //WEB_SERVER_URL=http:/$()/127.0.0.1:5000
 
 // openAI config
-WEB_SERVER_URL = https:/$()/api.openai.com
-LLM_MODEL_NAME = "gpt-3.5-turbo"
+WEB_SERVER_URL=https:/$()/api.openai.com
+LLM_MODEL_NAME=gpt-3.5-turbo

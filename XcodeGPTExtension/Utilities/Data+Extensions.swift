@@ -16,12 +16,17 @@ public extension Data {
             let data = try JSONSerialization.data(withJSONObject: object, options: options)
             return String(data: data, encoding: .utf8)
         } catch {
-            let stringData = String(data: self, encoding: .utf8)
-            let description = "❌❌❌ [Error] converting Data to JSON String: \(error.localizedDescription)" +
-                            " \nData(in String): \(stringData ?? "")"
-            
-            Logger.process.debug("\(description)")
+            logError(error: error)
             return nil
         }
+    }
+    
+    private func logError(error: Error) {
+        let stringData = String(data: self, encoding: .utf8)
+        
+        // Log error details here
+        let description = "❌❌❌ [Error] converting Data to JSON String: \(error.localizedDescription)" +
+        " \nData(in String): \(stringData ?? "")"
+        Logger.process.debug("\(description)")
     }
 }

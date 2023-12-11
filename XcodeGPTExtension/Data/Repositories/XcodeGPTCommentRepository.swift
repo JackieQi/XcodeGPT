@@ -12,10 +12,9 @@ final class XcodeGPTCommentRepository: BaseXcodeGPTRepository, CommentRepository
         do {
             let chatService = try initializeChatService()
             let chatGPTResponse = try await chatService.comment(function: code)
-            return try processChatResponse(chatGPTResponse)
+            return processChatResponse(chatGPTResponse)
         } catch let error {
-            try handleChatError(error)
-            return []
+            throw handleChatError(error)
         }
     }
 }

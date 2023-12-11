@@ -9,13 +9,13 @@ import Foundation
 
 final class XcodeGPTCodeSmellsRepository: BaseXcodeGPTRepository, CodeSmellsRepository {
     func searchForCodeSmells(in code: String) async throws -> [Suggestion] {
+        let chatService = try initializeChatService()
+        
         do {
-            let chatService = try initializeChatService()
             let chatGPTResponse = try await chatService.codeSmellsFor(code: code)
-            return try processChatResponse(chatGPTResponse)
+            return processChatResponse(chatGPTResponse)
         } catch let error {
-            try handleChatError(error)
-            return []
+            throw handleChatError(error)
         }
     }
 }

@@ -15,7 +15,7 @@ final class DefaultCodeSmellsUseCase: CodeSmellsUseCase {
     }
     
     func searchForCodeSmells(in code: [String]) async throws -> Suggestion {
-        let preparedCode = code.reduce("") { $0 + $1 }
+        let preparedCode = code.joined()
         
         let suggestions = try await self.repository.searchForCodeSmells(in: preparedCode)
         

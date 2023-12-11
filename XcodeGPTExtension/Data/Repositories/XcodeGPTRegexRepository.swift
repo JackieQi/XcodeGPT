@@ -9,10 +9,11 @@ import Foundation
 
 final class XcodeGPTRegexRepository: BaseXcodeGPTRepository, RegexRepository {
     func generateRegexFor(string value: String) async throws -> [Suggestion] {
+        let chatService = try initializeChatService()
+        
         do {
-            let chatService = try initializeChatService()
             let chatGPTResponse = try await chatService.generateRegexFor(string: value)
-            return try processChatResponse(chatGPTResponse)
+            return processChatResponse(chatGPTResponse)
         } catch let error {
             try handleChatError(error)
             return []

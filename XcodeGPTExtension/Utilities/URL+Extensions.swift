@@ -8,32 +8,25 @@
 import Foundation
 
 public extension URLRequest {
-    // convert URLRequest to cURL format for BE to debug
+    // convert URLRequest to cURL format
     var curlString: String {
-#if !DEBUG
-        return ""
-#else
-        var result = "curl "
+        guard let url = url else { return "" }
         
-        if let method = httpMethod {
-            result += "-X \(method) \\\n"
-        }
+        var result = "curl -X \(httpMethod ?? "GET") \\\n"
         
-        if let headers = allHTTPHeaderFields {
-            for (header, value) in headers {
-                result += "-H \"\(header): \(value)\" \\\n"
+        let headerStrings = allHTTPHeaderFields?.map { "-H \"\($0.key): \($0.value)\" \\\n" } ?? []
+        result += headerStrings.joined()
+        
+        if let body = httpBody, !body.isEmpty {
+            if let jsonString = body.toJSONString() {
+                result += "-d '\(jsonString)' \\\n"
+            } else {
+                let bodyString = String(data: body, encoding: .utf8) ?? ""
+                result += "-d '\(bodyString)' \\\n"
             }
         }
         
-        if let body = httpBody, !body.isEmpty, let string = body.toJSONString(), !string.isEmpty {
-            result += "-d '\(string)' \\\n"
-        }
-        
-        if let url = url {
-            result += "'\(url.absoluteString)'"
-        }
-        
+        result += "'\(url.absoluteString)'"
         return result
-#endif
     }
 }
