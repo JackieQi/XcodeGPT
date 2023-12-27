@@ -38,7 +38,7 @@ To revert
 
 ```git update-index --no-assume-unchanged Configurations/*.xcconfig```
 
-**NOTE**: API key will be copied into Common.xcconfig when running the extension app with **ChatGPTExtension** scheme with a [Shell Script](Assets/Pre-actions.png) which is defined as **pre-actions** in the scheme.
+**NOTE**: API key will be copied into Common.xcconfig when running the extension app with **XcodeGPTExtension** scheme with a [Shell Script](Assets/Pre-actions.png) which is defined as **pre-actions** in the scheme.
 
 
 ## Running Self hosted language models
@@ -57,14 +57,14 @@ To revert
 3. From LLM Studio, select your model at the top, then click "**Start Server**".
 
 ## Usage
-Make sure you select "**ChatGPTExtension**" [scheme](Assets/Scheme.png), then select from top menu "**Product**" -> "**Archive**". In Organizer window, select **Distribute App**, then select [**Custom**](Assets/Custom.png), [**Copy App**](Assets/Export.png). Store the app in your local folder. 
+Make sure you select "**XcodeGPTExtension**" [scheme](Assets/Scheme.png), then select from top menu "**Product**" -> "**Archive**". In Organizer window, select **Distribute App**, then select [**Custom**](Assets/Custom.png), [**Copy App**](Assets/Export.png). Store the app in your local folder. 
 
-Open the folder, you should see the mac app **ChatGPT**. Double click to install. It will create extension in your mac, "**System Preference**" -> "[**Extensions**](Assets/Extension.png)". Now you should be able to use it in any xcode project under "**Editor**" -> "[**ChatGPTExtension**](Assets/Commands.png)"
+Open the folder, you should see the mac app **XcodeGPT**. Double click to install. It will create extension in your mac, "**System Preference**" -> "[**Extensions**](Assets/Extension.png)". Now you should be able to use it in any xcode project under "**Editor**" -> "[**XcodeGPTExtension**](Assets/Commands.png)"
 
 **Delete Extension**: Just delete the original app from the folder where you installed before. 
 
 ## Debug & Test
-Edit **ChatGPTExtension** scheme and select Xcode.app as [executable](Assets/Executable.png). When running the app, it will ask you to select a different xcode project, which will open another xcode instance. You can then use extension command directly there. Meanwhile you can see the debug info from original xcode console.
+Edit **XcodeGPTExtension** scheme and select Xcode.app as [executable](Assets/Executable.png). When running the app, it will ask you to select a different xcode project, which will open another xcode instance. You can then use extension command directly there. Meanwhile you can see the debug info from original xcode console.
 
 ## Add new feature
 1. Define your prompt in [**Localizable**](https://github.com/JackieQi/XcodeGPT/blob/main/XcodeGPTExtension/Data/Network/ChatService/Resources/Localizable.xcstrings)
@@ -99,6 +99,8 @@ Edit **ChatGPTExtension** scheme and select Xcode.app as [executable](Assets/Exe
 [ctransformers](https://github.com/marella/ctransformers) a Python library with GPU accel, LangChain support, and OpenAI-compatible AI server.
 
 [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) a Python library with GPU accel, LangChain support, and OpenAI-compatible API server.
+
+[ollama](https://ollama.ai/) Get up and running with large language models, locally
 
 ## Reference
 [Inspiration](https://medium.com/globant/chatgpt-integration-in-xcode-how-to-improve-your-apps-with-ai-3bdbc34bea48)
